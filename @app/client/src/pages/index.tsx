@@ -18,15 +18,18 @@ const Home: NextPage = () => {
     <SharedLayout title="" query={query}>
       <Row justify="space-between" gutter={32}>
         <Col xs={24} sm={16}>
-          <Title data-cy="homepage-header">
-            Welcome to the PostGraphile starter
-          </Title>
-          <Paragraph>
-            This project can serve as a basis for your own project. We've added
-            many features that most projects require, but you're free to remove
-            them or replace them with whatever you need.
-          </Paragraph>
-
+          <Title data-cy="homepage-header">Welcome to Nubri</Title>
+          <section className="section">
+            <form action="/search" method="get">
+              <input
+                name="q"
+                type="text"
+                id="qfield"
+                value="{{ gvars.search_query }}"
+              />
+            </form>
+            <div id="wrap"></div>
+          </section>
           <Paragraph>
             <Text mark>
               Please read the next few sections before continuing.
@@ -271,8 +274,8 @@ const Home: NextPage = () => {
           </Paragraph>
         </Col>
         <Col xs={24} sm={8}>
-          <Title level={4}>PostGraphile relies on your support</Title>
-          <Paragraph strong>A message from Benjie</Paragraph>
+          <Title level={4}>Nubri relies on your support</Title>
+          <Paragraph strong>A message from Our CEO</Paragraph>
           <Paragraph>
             I really hope that this project wows you 😍 and saves you huge
             amounts of time. I've certainly poured a lot of time into it!
